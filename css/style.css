@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .printable,
+    .printable * {
+        visibility: visible;
+    }
+
+}
+
+#editar {
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.tjsp {
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.poderJud {
+    margin-top: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#header {
+    margin-top: 50px;
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    text-align: center;
+}
+
+#remetente {
+    text-align: center;
+    margin-top: 230px;
+    padding: 15px;
+    display: inline-block;
+    width: 500px;
+}
+
+#destinatario {
+    text-align: center;
+    margin-top: 230px;
+    padding: 15px;
+    display: inline-block;
+    width: 500px;
+}
+
+#declaracao {
+    padding: 20px;
+    text-align: center;
+}
+
+#textDeclaracao {
+    padding: 30px;
+    text-align: left;
+}
+
+table {
+    margin: auto;
+}
+
+#atenciosamente {
+    margin-left: 30px;
+}
+
+#correios {
+    padding: 20px;
+}
+
+#tecIt2b {
+    padding: 20px;
+}

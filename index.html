@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>App Termo - Equipamento para Reparo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+    <form id="editar">
+        <div>
+            <h1 class="display-1 text-dark">ATENÇÃO</h1>
+            <P>Seguir o procedimento de coleta para os correios</P>
+            <a class="btn bg-primary text-light" href="pdf/COLETA CORREIOS -.pdf" target="_blank">"Microsoft Word -
+                COLETA CORREIOS" (PDF);</a>
+            <P>Depois de ter feita a solicitação aos Correios, Selecione os itens abaixo para Prosseguir.</P>
+            <P>Preencha todos os campos para não haver Erros.</P>
+        </div>
+        <label>Nome Técnico IT2B:</label>
+        <input type="text" name="idTec" id="" placeholder="Insira seu nome">
+        <label for="">Número do Objeto:</label>
+        <input type="number" name="numOb" id="" placeholder="Número do Objeto Correios">
+        <label for="">Número da Coleta:</label>
+        <input type="number" name="numCo" id="" placeholder="Número da Coleta Correios">
+        <label for="">ID Chamado:</label>
+        <input type="number" name="idChamado" id="" placeholder="Número do chamado Smax">
+        <label for="">Descrição da Mercadoria:</label>
+        <input type="text" name="descMerc" id="" placeholder="Especifique o Equipamento">
+        <label for="">Patrimônio:</label>
+        <input type="number" name="patriMonio" id="" placeholder="Número do PATRIMONIO TJSP do Equipamento">
+        <label for="">Quantidade:</label>
+        <input type="number" name="quantiDade" id=""
+            placeholder="Informe a quantidade de equipamentos que serão Enviados">
+        <label>Valor:</label>
+        <input type="number" name="vaLor" id="" placeholder="Informe o Valor">
+        <label>Qual departamento Departamento STI</label>
+        <select id="stiDepartamento">
+            <option></option>
+            <option>3.2.5</option>
+        </select>
+        <label>Qual Região?</label>
+        <select id="interiorOuCapital">
+            <option></option>
+            <option>DO INTERIOR</option>
+        </select>
+        <label>Selecione a Comarca</label>
+        <select id="comarca">
+            <option></option>
+            <option>SOROCABA/SP</option>
+        </select>
+        <label class=""><input type="file" id="fileElem" multiple accept="image/*" style="display:none" /><a
+                class="btn bg-dark text-light" href="#" id="fileSelect">Adicionar sua Assinatura (Opcional)</a></label>
+        <button class="btn bg-primary text-light" id="botao"
+            onclick="justOneTime(numOb.value,numCo.value,idTec.value,idChamado.value,descMerc.value,patriMonio.value,quantiDade.value,vaLor.value,)">Gerar
+            Documentos</button>
+        <p id="btnImprimir"></p>
+        <section>
+            <footer class="container py-5">
+                <div class="row">
+                    <div class="col-6 col-md text-center">
+                        <h5>&copy Desevolvido por <a class="text-success"
+                                href="https://gustopster.github.io/port/">Gustopster</a></h5>
+                        <ul class="list-unstyled text-small">
+                            <li>
+                                <a class="text-dark" href="https://www.linkedin.com/in/gustavo-gomes-ggs/"
+                                    target="_blank">Linkedin</a>
+                            </li>
+                            <li>
+                                <a class="text-dark"
+                                    href="https://api.whatsapp.com/send?phone=5515991180605&text=Visualizei%20seu%20Portf%C3%B3lio.%20Posso%20solicitar%20um%20or%C3%A7amento%20seu%3F"
+                                    target="_blank">WhatsApp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </form>
+    <header id="header" class="printable">
+        <div class="tjsp">
+            <img src="css/tjsp.png">
+        </div>
+        <div class="poderJud">
+            <img src="css/poderJud.png">
+        </div>
+        <h3>PODER JUDICIÁRIO</h3>
+        <h3>TRIBUNAL DE JUSTIÇA DE SÃO PAULO</h3>
+        <h4>SECRETARIA DE TECNOLOGIA DA INFORMAÇÃO</h4>
+        <h6 id="sti">STI X.X– SERVIÇO DE APOIO AOS USUÁRIOS [INFORMAR SE É CAPITAL OU INTERIOR]</h6>
+        <h6 id="cordenador">Cordenador: [INFORMAR COORDENADOR RESPONSÁVEL SENDO CAPITAL OU INTERIOR] – Mat.</h6>
+        <h6 id="endereco">Tribunal de Justiça de São Paulo – Rua , N° Sala : andar: [INFORMAR ENDEREÇO DA LOCALIDADE DE
+            ORIGEM]</h6>
+        <h6 id="telefone">Telefone: XX XXXX-XXXX</h6>
+    </header>
+    <section id="remetente" class="printable">
+        <h3>Remetente:</h3>
+        <p>Razão Social: São Paulo Tribunal de Justiça</p>
+        <p>Endereço: Praça da Sé, SN</p>
+        <p>Cidade: São Paulo</p>
+        <p>CNPJ: 51.174.001/0001-93</p>
+        <p id="informarComarca">[INFORME A COMARCA]</p>
+        <p>CEP: 01001-000</p>
+        <p>Estado: SP</p>
+    </section>
+    <section id="destinatario" class="printable">
+        <h3>Destinatário:</h3>
+        <p>Razão Social: IT2B Tecnologia e Serviços Ltda</p>
+        <p>Endereço: Av. Adelino Cardana, 293 – Sala 311</p>
+        <p>Cidade: Barueri</p>
+        <p>CNPJ: 04.392.420/0002-00</p>
+        <p>&nbsp;</p>
+        <p>CEP: 06401-147</p>
+        <p>Estado: SP</p>
+    </section>
+    <section id="declaracao" class="printable">
+        <h3><b>DECLARAÇÃO:</b></h3>
+        <p id="textDeclaracao">O Tribunal de Justiça do Estado de São Paulo, inscrito no <b>CNPJ:
+                51.174.001/0001-93</b>, é considerado <b>NÃO CONTRIBUINTE DO ICMS</b>, não sujeito à inscrição no
+            Cadastro Estadual de Contribuinte da Secretaria da Fazenda do estado de São Paulo, e nem á emissão de
+            documentos fiscais previstos na legislação de ICMS, e consequentemente, dispensada das obrigações fiscais.
+        </p>
+        <table id="tabela" border="1" width="75%" class="printable">Sendo assim, estamos enviando os materiais
+            descriminados abaixo:
+            <tread>
+                <tr>
+                    <td>ID Chamado</td>
+                    <td>Descrição da Mercadoria</td>
+                    <td>Patrimônio</td>
+                    <td>Quantidade</td>
+                    <td>Valor</td>
+                </tr>
+            </tread>
+        </table>
+    </section>
+    <p id="atenciosamente" class="printable">Atenciosamente,</p><br>
+    <footer class="printable">
+        <P id="correios"></P>
+        <p id="correiosOb"></p>
+        <p id="correiosCo"></p>
+        <p id="tecIt2b"></p>
+        <p id="fileList"></p>
+    </footer>
+</body>
+<script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+</html>
