@@ -32,7 +32,11 @@ li {
     }
 
 }
-
+form input, form select {
+    text-align: center;
+    width: 115px;
+    border-radius: 20px;
+}
 #editar {
     text-align: center;
     color: black;
