@@ -12,10 +12,9 @@
 <body>
     <form id="editar" class="">
         <div>
-            <h1 class="display-1 text-dark">ATENÇÃO</h1>
-            <P>Seguir o procedimento de coleta para os correios</P>
-            <a class="btn bg-primary text-light" href="pdf/COLETA CORREIOS -.pdf" target="_blank">"Microsoft Word -
-                COLETA CORREIOS" (PDF);</a>
+            <h1 class="display-4 text-dark">ATENÇÃO!</h1>
+            <P class="text-dark">Seguir o procedimento de coleta para os correios</P>
+            <a class="btn bg-primary text-light mb-4" href="pdf/COLETA CORREIOS -.pdf" target="_blank">MANUAL COLETA CORREIOS</a>
             <P>Depois de ter feita a solicitação aos Correios, Selecione os itens abaixo para Prosseguir.</P>
             <P>Preencha todos os campos para não haver Erros.</P>
         </div>
@@ -33,9 +32,9 @@
         <input type="number" name="patriMonio" id="" placeholder="Digite">
         <label for="">Quantidade:</label>
         <input type="number" name="quantiDade" id=""
-            placeholder="1 Qntd Apenas">
+            placeholder="1 Apenas">
         <label>Valor:</label>
-        <input type="number" name="vaLor" id="" placeholder="Informe o Valor">
+        <input type="number" name="vaLor" id="" placeholder="Exp: 100">
         <label>Departamento STI</label>
         <select id="stiDepartamento">
             <option></option>
@@ -52,26 +51,26 @@
             <option>SOROCABA/SP</option>
         </select>
         <label class=""><input type="file" id="fileElem" multiple accept="image/*" style="display:none" /><a
-                class="btn bg-dark text-light" href="#" id="fileSelect">Adicionar sua Assinatura (Opcional)</a></label>
+                class="btn bg-dark text-light my-2" href="#" id="fileSelect">Assinatura (Opcional)</a></label>
         <button class="btn bg-primary text-light" id="botao"
             onclick="justOneTime(numOb.value,numCo.value,idTec.value,idChamado.value,descMerc.value,patriMonio.value,quantiDade.value,vaLor.value,)">Gerar
             Documentos</button>
         <p id="btnImprimir"></p>
         <section>
-            <footer class="container py-5">
+            <footer class="container py-5 my-5">
                 <div class="row">
                     <div class="col-6 col-md text-center">
-                        <h5>&copy Desevolvido por <a class="text-success"
-                                href="https://gustopster.github.io/port/">Gustopster</a></h5>
+                        <small>&copy Desevolvido por <a class="text-success"
+                                href="https://gustopster.github.io/port/" target="_blank">Gustopster</a></small>
                         <ul class="list-unstyled text-small">
                             <li>
-                                <a class="text-dark" href="https://www.linkedin.com/in/gustavo-gomes-ggs/"
-                                    target="_blank">Linkedin</a>
+                                <small><a class="text-dark" href="https://www.linkedin.com/in/gustavo-gomes-ggs/"
+                                    target="_blank">Linkedin</a></small>
                             </li>
                             <li>
-                                <a class="text-dark"
+                            <small><a class="text-dark"
                                     href="https://api.whatsapp.com/send?phone=5515991180605&text=Visualizei%20seu%20Portf%C3%B3lio.%20Posso%20solicitar%20um%20or%C3%A7amento%20seu%3F"
-                                    target="_blank">WhatsApp</a>
+                                    target="_blank">WhatsApp</a></small>
                             </li>
                         </ul>
                     </div>
