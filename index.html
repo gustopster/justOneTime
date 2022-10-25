@@ -10,93 +10,138 @@
 </head>
 
 <body>
-    <form id="editar" class="">
-        <div>
-            <h1 class="display-4 text-dark">ATENÇÃO!</h1>
-            <P class="text-dark">Seguir o procedimento de coleta para os correios</P>
-            <a class="btn bg-primary text-light mb-4" href="pdf/COLETA CORREIOS -.pdf" target="_blank">MANUAL COLETA
-                CORREIOS</a>
-            <P>Depois de ter feita a solicitação aos Correios, Selecione os itens abaixo para Prosseguir.</P>
-            <P>Preencha todos os campos para não haver Erros.</P>
-        </div>
-        <label>Nome Técnico IT2B:</label>
-        <input type="text" name="idTec" id="" placeholder="Digite">
-        <label for="">RG do Técnico:</label>
-        <input type="number" name="rgTec" id="" placeholder="Digite">
-        <label for="">Número do Objeto:</label>
-        <input type="number" name="numOb" id="" placeholder="Digite">
-        <label for="">Número da Coleta:</label>
-        <input type="number" name="numCo" id="" placeholder="Digite">
-        <label for="">ID Chamado:</label>
-        <input type="number" name="idChamado" id="" placeholder="Digite">
-        <label for="">Descrição da Mercadoria:</label>
-        <input type="text" name="descMerc" id="" placeholder="Digite">
-        <label for="">Patrimônio:</label>
-        <input type="number" name="patriMonio" id="" placeholder="Digite">
-        <label for="">Número de Série:</label>
-        <input type="number" name="serialNumber" id="" placeholder="Digite">
-        <label for="">Modelo:</label>
-        <input type="text" name="descModelo" id="" placeholder="Digite">
-        <label for="">Quantidade:</label>
-        <input type="number" name="quantiDade" id="" placeholder="1 Apenas">
-        <label>Valor:</label>
-        <input type="number" name="vaLor" id="" placeholder="Exp: 100">
-        <label>Nome do Usuário:</label>
-        <input type="text" name="userId" id="" placeholder="Digite">
-        <label>Matricula do Usuário:</label>
-        <input type="number" name="userMat" id="" placeholder="Exp: 100">
-        <label>Telefone do Usuário:</label>
-        <input type="number" name="userTel" id="" placeholder="Digite">
-        <label>Descreva o Problema:</label>
-        <input type="text" name="descProblema" id="" placeholder="Digite">
-        <label>Atividade Realizada:</label>
-        <input type="text" name="descAtividade" id="" placeholder="Digite">
-        <label>Encontrado casos de Mau Uso?</label>
-        <input type="text" name="descMauUso" id="" placeholder="Digite"><BR>
-        <label>FORNECEDOR / FABRICANTE</label>
-        <input type="text" name="fabricanteFornecedor" id="" placeholder="Digite">
-        <label>Departamento STI</label>
-        <select id="stiDepartamento">
-            <option></option>
-            <option>3.2.5</option>
-        </select>
-        <label>Qual Região?</label>
-        <select id="interiorOuCapital">
-            <option></option>
-            <option>DO INTERIOR</option>
-        </select>
-        <label>Selecione a Comarca</label>
-        <select id="comarca">
-            <option></option>
-            <option>SOROCABA/SP</option>
-        </select>
-        <button class="btn bg-primary text-light" id="botao"
-            onclick="justOneTime(idTec.value,rgTec.value,numOb.value,numCo.value,idChamado.value,descMerc.value,patriMonio.value,serialNumber.value,descModelo.value,quantiDade.value,vaLor.value,userId.value,userMat.value,userTel.value,descProblema.value,descAtividade.value,descMauUso.value,fabricanteFornecedor.value)">
-            Gerar Documentos</button>
-        <p id="btnImprimir"></p>
-        <section>
-            <footer class="container">
-                <div class="row">
-                    <div class="col-6 col-md text-center">
-                        <small>&copy Desevolvido por <a class="text-success" href="https://gustopster.github.io/port/"
-                                target="_blank">Gustopster</a></small>
-                        <ul class="list-unstyled text-small">
-                            <li>
-                                <small><a class="text-dark" href="https://www.linkedin.com/in/gustavo-gomes-ggs/"
-                                        target="_blank">Linkedin</a></small>
-                            </li>
-                            <li>
-                                <small><a class="text-dark"
-                                        href="https://api.whatsapp.com/send?phone=5515991180605&text=Visualizei%20seu%20Portf%C3%B3lio.%20Posso%20solicitar%20um%20or%C3%A7amento%20seu%3F"
-                                        target="_blank">WhatsApp</a></small>
-                            </li>
-                        </ul>
-                    </div>
+    <div class="row p-3">
+        <form id="editar" class="form-inline" action="#">
+            <div class="text-dark text-center col-12">
+                <h1 class=" display-4">ATENÇÃO!</h1>
+                <p class="">Realizar o Procedimento abaixo para preencher os outros campos</p>
+                <a class="btn bg-primary text-light" href="pdf/COLETA CORREIOS -.pdf" target="_blank">MANUAL COLETA
+                    CORREIOS</a>
+            </div>
+            <div class="form-group col-2">
+                <label class="">Nome Técnico IT2B:</label>
+                <input type="text" name="idTec" id="" placeholder=""></h5>
+            </div>
+            <div class="form-group col-2">
+                <label class="">RG do Técnico:</label>
+                <input type="number" name="rgTec" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Número do Objeto:</label>
+                <input type="text" name="numOb" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Número da Coleta:</label>
+                <input type="text" name="numCo" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">ID Chamado:</label>
+                <input type="number" name="idChamado" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Descrição da Mercadoria:</label>
+                <input type="text" name="descMerc" id="" placeholder="" class="p-2">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Patrimônio:</label>
+                <input type="number" name="patriMonio" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Número de Série:</label>
+                <input type="number" name="serialNumber" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Modelo:</label>
+                <input type="text" name="descModelo" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Quantidade:</label>
+                <input type="number" name="quantiDade" id="" placeholder="1 Apenas">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Valor:</label>
+                <input type="number" name="vaLor" id="" placeholder="Exp: 100">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Nome do Usuário:</label>
+                <input type="text" name="userId" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Matricula do Usuário:</label>
+                <input type="number" name="userMat" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Telefone do Usuário:</label>
+                <input type="number" name="userTel" id="" placeholder="">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Descreva o Problema:</label>
+                <input type="text" name="descProblema" id="" placeholder="" class="p-2">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Atividade Realizada:</label>
+                <input type="text" name="descAtividade" id="" placeholder="" class="p-2">
+            </div>
+            <div class="form-group col-2">
+                <label class="">Mau Uso?</label>
+                <input type="text" name="descMauUso" id="" placeholder="" class="p-2">
+            </div>
+            <div class="form-group col-2">
+                <label class="">FABRICANTE:</label>
+                <input type="text" name="fabricanteFornecedor" id="" placeholder="Exp: Lenovo">
+            </div>
+            <div class="form-group col-12">
+                <p id="btnImprimir" class="col-12 text-center"></p>
+                <div class="col-6 form-inline">
+                    <label class="p-1 ml-5 mr-2">Departamento STI</label>
+                    <select id="stiDepartamento" class="form-control">
+                        <option></option>
+                        <option>3.2.5</option>
+                    </select>
+                    <label class="p-1 mr-2 ml-5">Qual Região?</label>
+                    <select id="interiorOuCapital" class="form-control">
+                        <option></option>
+                        <option>DO INTERIOR</option>
+                    </select>
+                    <label class="p-1 ml-5 mr-2 my-2">Selecione a Comarca</label>
+                    <select id="comarca" class="form-control">
+                        <option></option>
+                        <option>SOROCABA/SP</option>
+                    </select>
                 </div>
-            </footer>
-        </section>
-    </form> -->
-
+                <button class="btn btn-lg bg-light btn-outline-primary col-6 my-2" id="botao" onclick="justOneTime(idTec.value,rgTec.value,numOb.value,numCo.value,idChamado.value,descMerc.value,
+                    patriMonio.value,serialNumber.value,descModelo.value,quantiDade.value,vaLor.value,userId.value,
+                    userMat.value,userTel.value,descProblema.value,descAtividade.value,descMauUso.value,
+                    fabricanteFornecedor.value)">
+                    <b>ENVIAR</b></button>
+            </div>
+            <div class="col-12">
+                <div class="text-center">
+                    <small>© Desevolvido por
+                        <a class="text-success" href="https://gustopster.github.io/port/" target="_blank">Gustopster
+                        </a>
+                    </small>
+                    <ul class="list-unstyled text-small">
+                        <li>
+                            <small>
+                                <a class="text-dark" href="https://www.linkedin.com/in/gustavo-gomes-ggs/"
+                                    target="_blank">Linkedin
+                                </a>
+                            </small>
+                        </li>
+                        <li>
+                            <small>
+                                <a class="text-dark"
+                                    href="https://api.whatsapp.com/send?phone=5515991180605&amp;text=Visualizei%20seu%20Portf%C3%B3lio.%20Posso%20solicitar%20um%20or%C3%A7amento%20seu%3F"
+                                    target="_blank">WhatsApp
+                                </a>
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
     <!--Inicio do Termo-->
     <header id="header" class="printable">
         <div class="tjsp">
