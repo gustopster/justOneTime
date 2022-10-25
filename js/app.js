@@ -61,7 +61,7 @@ function justOneTime(idTec,rgTec,numOb,numCo,idChamado,descMerc,patriMonio,seria
   };
   if (comarca === "SOROCABA/SP") {
     let imprimir = document.getElementById("btnImprimir");
-    imprimir.innerHTML = `<p class="text-success my-2">Sucesso, Clique em Imprimir!</p><button class="btn btn-lg bg-success text-light my-2" id="btnImprimir" onclick='window.print()'>Imprimir</button>`;
+    imprimir.innerHTML = `<p class="text-success">Sucesso! Basta Imprimir Agora!</p><button class="btn bg-success text-light" id="btnImprimir" onclick='window.print()'>IMPRIMIR</button>`;
     let correios = document.getElementById("correios");
     correios.innerHTML = `<p>${enderecoSorocaba[0].cidadeOrigem} (Data e Hora: ${horario})</p>`;
     let informarComarca = document.getElementById("informarComarca");
